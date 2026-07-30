@@ -4,16 +4,26 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Innovative Tech Solutions — Code. Learn. Grow.</title>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<div class="rail">
+  <a href="https://github.com/WANGAMALINDA" target="_blank" rel="noopener" title="GitHub">gh</a>
+  <a href="https://linkedin.com/in/malinda-wanga" target="_blank" rel="noopener" title="LinkedIn">in</a>
+  <a href="mailto:wangamalinda4@gmail.com" title="Email">@</a>
+</div>
+
 <nav>
-  <div class="logo"><span>Innovative</span> Tech Solutions</div>
+  <div class="nav-left">
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div class="logo">Innovative<span>/</span>Tech</div>
+  </div>
   <ul>
     <li><a href="#services">Services</a></li>
-    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#demos">Live demos</a></li>
+    <li><a href="#packages">Packages</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -21,7 +31,10 @@
 </nav>
 
 <section class="hero">
+  <div class="ghost-num">01</div>
+
   <div class="hero-content">
+    <div class="hero-tag">Web · Training · Consulting</div>
     <h1>
       Code.<br>
       <span class="line2">Learn.</span><br>
@@ -32,7 +45,7 @@
     </p>
     <div class="hero-btns">
       <a href="#services" class="btn-primary">Explore services</a>
-      <a href="#cta" class="btn-outline">Book a consultation</a>
+      <a href="#contact" class="btn-outline">Book a consultation</a>
     </div>
     <div class="hero-stats">
       <div>
@@ -40,7 +53,7 @@
         <div class="stat-label">Languages taught</div>
       </div>
       <div>
-        <div class="stat-num">2</div>
+        <div class="stat-num">02</div>
         <div class="stat-label">Years in business</div>
       </div>
       <div>
@@ -49,7 +62,46 @@
       </div>
     </div>
   </div>
+
+  <div class="hero-visual">
+    <svg viewBox="0 0 480 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of a code editor with a build script">
+      <defs>
+        <linearGradient id="scr" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#123028"/>
+          <stop offset="100%" stop-color="#0a1a15"/>
+        </linearGradient>
+        <linearGradient id="rim" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#c9a463"/>
+          <stop offset="100%" stop-color="#5fe0b4"/>
+        </linearGradient>
+      </defs>
+      <ellipse cx="240" cy="368" rx="175" ry="16" fill="#000" opacity="0.35"/>
+      <rect x="65" y="64" width="350" height="228" rx="14" fill="url(#scr)" stroke="rgba(95,224,180,0.25)" stroke-width="1.5"/>
+      <rect x="65" y="64" width="350" height="30" rx="14" fill="#0d221c"/>
+      <circle cx="84" cy="79" r="4" fill="#e05a4f"/>
+      <circle cx="98" cy="79" r="4" fill="#c9a463"/>
+      <circle cx="112" cy="79" r="4" fill="#5fe0b4"/>
+      <g font-family="JetBrains Mono, monospace" font-size="11">
+        <text x="86" y="126" fill="#5fe0b4" opacity="0.9">const grow = () =&gt; {</text>
+        <text x="106" y="146" fill="#c9a463">build(client.goals);</text>
+        <text x="106" y="166" fill="#eef2ee" opacity="0.7">teach(real_world_skills);</text>
+        <text x="106" y="186" fill="#c9a463">consult(what_works);</text>
+        <text x="86" y="206" fill="#5fe0b4" opacity="0.9">}</text>
+      </g>
+      <rect x="84" y="216" width="7" height="13" fill="#5fe0b4" class="blink"/>
+      <path d="M110 300 L110 342 Q110 352 120 352 L360 352 Q370 352 370 342 L370 300 Z" fill="#0d221c" stroke="url(#rim)" stroke-width="2"/>
+      <path d="M100 296 L380 296 L400 306 L80 306 Z" fill="#12281f" stroke="rgba(201,164,99,0.4)"/>
+    </svg>
+  </div>
 </section>
+
+<div class="tag-row">
+  <a href="#services">Services</a>
+  <a href="#demos">Live demos</a>
+  <a href="#packages">Packages</a>
+  <a href="#process">Process</a>
+  <a href="#about">About</a>
+</div>
 
 <div class="ticker">
   <div class="ticker-inner">
@@ -91,48 +143,119 @@
   <p class="section-intro">From building and maintaining your digital presence to teaching you to code — we cover the full technology lifecycle.</p>
   <div class="services-grid">
     <div class="service-card">
-      <div class="service-title">Assessment & consulting</div>
-      <p class="service-desc">We evaluate your current tech stack and digital strategy, then provide clear, actionable recommendations that align with your business goals and budget.</p>
-    </div>
-    <div class="service-card">
       <div class="service-title">Website & web app development</div>
-      <p class="service-desc">Custom, responsive websites and web apps built for businesses of all sizes. From simple landing pages to complex applications — we craft digital experiences that convert.</p>
+      <p class="service-desc">Custom, responsive websites and web apps built for businesses of all sizes — from simple landing pages to complex applications.</p>
+      <div class="service-price">From R500 <span>per project</span></div>
     </div>
     <div class="service-card">
       <div class="service-title">Programming lessons</div>
-      <p class="service-desc">Structured, hands-on coding lessons for beginners and advanced learners. We teach React, PHP, Python, Java, JavaScript, Node.js, HTML, CSS, C++, and SQL with real-world projects.</p>
+      <p class="service-desc">One-on-one, hands-on coding lessons for beginners and advanced learners, with real-world projects.</p>
+      <div class="service-langs">React · PHP · Python · Java · JavaScript · Node.js · HTML · CSS · C++ · SQL</div>
+      <div class="service-price">R250 – R550 <span>per module</span></div>
     </div>
     <div class="service-card">
-      <div class="service-title">Maintenance & monitoring</div>
-      <p class="service-desc">We keep your systems healthy, up-to-date, and performing at their best — with proactive monitoring, regular updates, and rapid issue resolution.</p>
+      <div class="service-title">Consulting, maintenance & training</div>
+      <p class="service-desc">Tech assessments, ongoing maintenance & monitoring, and user training & documentation — scoped to what you actually need.</p>
+      <div class="service-price">Custom quote</div>
     </div>
-    <div class="service-card">
-      <div class="service-title">Training & documentation</div>
-      <p class="service-desc">Comprehensive user training sessions and professional technical documentation to ensure your team can confidently operate any system or tool we deploy.</p>
-    </div>
-    <div class="service-card">
+    <div class="service-card service-highlight">
       <div class="service-title">Free discovery call</div>
-      <p class="service-desc">Not sure where to start? Book a free 30-minute discovery call with Malinda to discuss your needs and find the right solution for your situation.</p>
+      <p class="service-desc">Not sure where to start? Book a free 30-minute call with Malinda to find the right fit for your situation.</p>
+      <a href="#contact" class="service-link">Book a call →</a>
     </div>
   </div>
 </section>
 
-<section id="languages">
-  <div class="section-label">Technologies we teach</div>
-  <h2>Programming languages</h2>
-  <p class="section-intro">We offer expert-led lessons across the most in-demand programming languages in the industry.</p>
-  <div class="lang-grid">
-    <div class="lang-card"><div class="lang-name">React</div><div class="lang-badge">Frontend</div></div>
-    <div class="lang-card"><div class="lang-name">PHP</div><div class="lang-badge">Backend</div></div>
-    <div class="lang-card"><div class="lang-name">Python</div><div class="lang-badge">Versatile</div></div>
-    <div class="lang-card"><div class="lang-name">Java</div><div class="lang-badge">OOP</div></div>
-    <div class="lang-card"><div class="lang-name">JavaScript</div><div class="lang-badge">Full-Stack</div></div>
-    <div class="lang-card"><div class="lang-name">Node.js</div><div class="lang-badge">Backend</div></div>
-    <div class="lang-card"><div class="lang-name">HTML</div><div class="lang-badge">Markup</div></div>
-    <div class="lang-card"><div class="lang-name">CSS</div><div class="lang-badge">Styling</div></div>
-    <div class="lang-card"><div class="lang-name">C++</div><div class="lang-badge">Systems</div></div>
-    <div class="lang-card"><div class="lang-name">SQL</div><div class="lang-badge">Database</div></div>
+<section id="demos">
+  <div class="section-label">See it in action</div>
+  <h2>Live Demos</h2>
+  <p class="section-intro">Anyone can show you a picture of a website. These are live, fully working projects built for real South African businesses — scroll around inside them, click the buttons, see how they actually behave.</p>
+
+  <div class="demos-viewport">
+    <div class="demos-arrow left" id="demosPrev" aria-label="Previous demo">‹</div>
+    <div class="demos-arrow right" id="demosNext" aria-label="Next demo">›</div>
+
+    <div class="demos-grid" id="demosGrid">
+
+      <div class="demo-card">
+        <div class="demo-frame-wrap">
+          <iframe src="https://www.qhawear.com/" title="QHAWEAR live demo" loading="lazy" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
+        </div>
+        <div class="demo-body">
+          <div class="demo-title-row">
+            <div class="demo-title">QHAWEAR</div>
+            <a href="https://www.qhawear.com/" target="_blank" rel="noopener" class="demo-link">Open live site ↗</a>
+          </div>
+          <div class="demo-case">
+            <div class="demo-case-item"><span>Problem</span>Clothing brand needed a proper e-commerce presence under its own domain instead of relying on social media alone.</div>
+            <div class="demo-case-item"><span>Tech stack</span>Responsive e-commerce build · custom domain (qhawear.com)</div>
+            <div class="demo-case-item"><span>Business result</span>A branded, always-on storefront the business owns outright — no platform fees, no algorithm dependency.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="demo-card">
+        <div class="demo-frame-wrap">
+          <iframe src="https://wangamalinda.github.io/dashboard/" title="Business dashboard live demo" loading="lazy" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
+        </div>
+        <div class="demo-body">
+          <div class="demo-title-row">
+            <div class="demo-title">Business Dashboard</div>
+            <a href="https://wangamalinda.github.io/dashboard/" target="_blank" rel="noopener" class="demo-link">Open live site ↗</a>
+          </div>
+          <div class="demo-case">
+            <div class="demo-case-item"><span>Problem</span>Owner was tracking finances and operations across scattered spreadsheets with no single source of truth.</div>
+            <div class="demo-case-item"><span>Tech stack</span>React · Supabase · Recharts</div>
+            <div class="demo-case-item"><span>Business result</span>One live dashboard with real-time charts and CRUD data entry, replacing manual spreadsheet updates.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="demo-card">
+        <div class="demo-frame-wrap">
+          <iframe src="https://wangamalinda.github.io/Food-Paleis/" title="Food Paleis live demo" loading="lazy" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
+        </div>
+        <div class="demo-body">
+          <div class="demo-title-row">
+            <div class="demo-title">Food Paleis</div>
+            <a href="https://wangamalinda.github.io/Food-Paleis/" target="_blank" rel="noopener" class="demo-link">Open live site ↗</a>
+          </div>
+          <div class="demo-case">
+            <div class="demo-case-item"><span>Problem</span>Buffet/catering business had no way for customers to view offerings or place orders online.</div>
+            <div class="demo-case-item"><span>Tech stack</span>HTML · CSS · JavaScript · WhatsApp-first ordering flow</div>
+            <div class="demo-case-item"><span>Business result</span>A mobile-friendly menu and ordering page that turns site visits directly into WhatsApp enquiries.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="demo-card">
+        <div class="demo-frame-wrap">
+          <iframe src="https://wangamalinda.github.io/TrackServ/" title="TrackServ live demo" loading="lazy" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
+        </div>
+        <div class="demo-body">
+          <div class="demo-title-row">
+            <div class="demo-title">TrackServ</div>
+            <a href="https://wangamalinda.github.io/TrackServ/" target="_blank" rel="noopener" class="demo-link">Open live site ↗</a>
+          </div>
+          <div class="demo-case">
+            <div class="demo-case-item"><span>Problem</span>Service-based business had no digital system to log and follow up on jobs or requests.</div>
+            <div class="demo-case-item"><span>Tech stack</span>JavaScript web app · structured data tracking</div>
+            <div class="demo-case-item"><span>Business result</span>Service requests are logged and tracked in one place instead of getting lost across calls and notebooks.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="demos-dots" id="demosDots">
+      <span class="active" data-i="0"></span>
+      <span data-i="1"></span>
+      <span data-i="2"></span>
+      <span data-i="3"></span>
+    </div>
   </div>
+
+  <p class="demos-note">Previews are the real, live sites embedded directly — if one doesn't render in the frame, use "Open live site" to view it in full.</p>
 </section>
 
 <section id="about">
@@ -204,47 +327,42 @@
   </div>
 </section>
 
-<section id="pricing">
-  <div class="section-label">Transparent pricing</div>
-  <h2>What it costs</h2>
-  <p class="section-intro">Affordable, accessible technology services. No hidden fees — just clear value.</p>
-  <div class="pricing-grid">
-    <div class="price-card featured">
-      <div class="price-title">Private programming lessons</div>
-      <div class="price-range">R250 – R550</div>
-      <div class="price-unit">per module</div>
-      <p class="price-desc">One-on-one lessons tailored to your pace and level. Choose your language and learn from scratch or level up your existing skills.</p>
-      <ul class="price-features">
-        <li>React, PHP, Python, Java & more</li>
-        <li>Beginner to advanced tracks</li>
-        <li>Real-world project-based learning</li>
-        <li>Flexible scheduling</li>
+<section id="packages">
+  <div class="section-label">Ready-made bundles</div>
+  <h2>Packages built for your industry</h2>
+  <p class="section-intro">Instead of starting from a blank page, pick a package designed around what your business already needs — then we tailor it from there.</p>
+  <div class="packages-grid">
+
+    <div class="package-card">
+      <div class="package-top">
+        <div class="package-title">Online Ordering Package</div>
+        <div class="package-for">For local food spots & takeaways</div>
+      </div>
+      <p class="package-desc">Take orders directly from your own site — and stop handing a cut of every sale to third-party delivery apps.</p>
+      <ul class="package-features">
+        <li>Front-end customer menu, mobile-first and on-brand</li>
+        <li>Secure checkout — card/EFT or streamlined WhatsApp handoff</li>
+        <li>Backend management dashboard to update items, prices & availability</li>
+        <li>Order notifications so nothing gets missed during a rush</li>
       </ul>
+      <a href="#contact" class="btn-outline package-cta">Get a quote for this package</a>
     </div>
-    <div class="price-card">
-      <div class="price-title">Website & web app development</div>
-      <div class="price-range">From R500</div>
-      <div class="price-unit">per project</div>
-      <p class="price-desc">Custom-built responsive websites and web apps designed to represent your brand and drive results — from landing pages to full business applications.</p>
-      <ul class="price-features">
-        <li>Mobile-responsive design</li>
-        <li>SEO-friendly structure</li>
-        <li>Contact forms & integrations</li>
-        <li>Delivery-ready in agreed timeline</li>
+
+    <div class="package-card package-2">
+      <div class="package-top">
+        <div class="package-title">E-Commerce Launch Package</div>
+        <div class="package-for">For retail businesses</div>
+      </div>
+      <p class="package-desc">Launch a proper online store under your own domain — built to sell, not just to look good.</p>
+      <ul class="package-features">
+        <li>Custom domain setup and connection (yourbusiness.co.za)</li>
+        <li>Product database build-out — MySQL or Supabase</li>
+        <li>Shopping cart and checkout flow</li>
+        <li>Mobile-responsive storefront matched to your brand</li>
       </ul>
+      <a href="#contact" class="btn-outline package-cta">Get a quote for this package</a>
     </div>
-    <div class="price-card">
-      <div class="price-title">Consulting & other services</div>
-      <div class="price-range">Custom quote</div>
-      <div class="price-unit">based on scope</div>
-      <p class="price-desc">Assessment & consulting, maintenance & monitoring, and training & documentation are quoted based on your specific needs.</p>
-      <ul class="price-features">
-        <li>Free initial discovery call</li>
-        <li>Transparent scope & pricing</li>
-        <li>No obligation quotes</li>
-        <li>Send a query below to get started</li>
-      </ul>
-    </div>
+
   </div>
 </section>
 
@@ -297,19 +415,15 @@
         </div>
       </div>
       <div class="form-group">
-        <label>Phone number</label>
-        <input type="tel" id="fphone" placeholder="e.g. 082 000 0000" />
-      </div>
-      <div class="form-group">
         <label>Service of interest *</label>
         <select id="fservice">
           <option value="">— Select a service —</option>
-          <option>Private Programming Lessons (R250–R550/module)</option>
           <option>Website & Web App Development (from R500)</option>
-          <option>Assessment & Consulting</option>
-          <option>Maintenance & Monitoring</option>
-          <option>Training & Documentation</option>
-          <option>Multiple Services</option>
+          <option>Online Ordering Package</option>
+          <option>E-Commerce Launch Package</option>
+          <option>Private Programming Lessons (R250–R550/module)</option>
+          <option>Consulting, Maintenance & Training</option>
+          <option>Not sure — free discovery call</option>
         </select>
       </div>
       <div class="form-group">
@@ -325,23 +439,12 @@
   </div>
 </section>
 
-<section id="cta">
-  <div class="content">
-    <div class="section-label">Let's work together</div>
-    <h2>Ready to build something great?</h2>
-    <p>Whether you want to learn to code, launch a website, or get expert IT advice — Innovative Tech Solutions is ready to help you move forward.</p>
-    <div class="hero-btns" style="justify-content:center;">
-      <a href="tel:0664948899" class="btn-primary">Call Malinda</a>
-      <a href="#contact" class="btn-outline">Send a query</a>
-    </div>
-  </div>
-</section>
-
 <footer>
   <div class="logo">Innovative <span>Tech</span> Solutions</div>
   <ul class="footer-links">
     <li><a href="#services">Services</a></li>
-    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#demos">Live demos</a></li>
+    <li><a href="#packages">Packages</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="https://github.com/WANGAMALINDA" target="_blank">GitHub</a></li>
@@ -353,7 +456,6 @@
 function sendEmail() {
   const name = document.getElementById('fname').value.trim();
   const email = document.getElementById('femail').value.trim();
-  const phone = document.getElementById('fphone').value.trim();
   const service = document.getElementById('fservice').value;
   const message = document.getElementById('fmessage').value.trim();
 
@@ -369,7 +471,6 @@ function sendEmail() {
     '--- ENQUIRY DETAILS ---\n' +
     'Name: ' + name + '\n' +
     'Email: ' + email + '\n' +
-    (phone ? 'Phone: ' + phone + '\n' : '') +
     'Service of Interest: ' + service + '\n\n' +
     'Message:\n' + message + '\n\n' +
     '--- Sent via Innovative Tech Solutions Website ---'
@@ -382,6 +483,49 @@ function sendEmail() {
     document.getElementById('formSuccess').style.display = 'block';
   }, 800);
 }
+
+/* ---- demos carousel controls ---- */
+(function () {
+  const grid = document.getElementById('demosGrid');
+  const dots = document.querySelectorAll('#demosDots span');
+  const prev = document.getElementById('demosPrev');
+  const next = document.getElementById('demosNext');
+  if (!grid) return;
+
+  function cardWidth() {
+    const card = grid.querySelector('.demo-card');
+    return card ? card.getBoundingClientRect().width + 28.8 : 400; // width + gap
+  }
+
+  function scrollToIndex(i) {
+    grid.scrollTo({ left: i * cardWidth(), behavior: 'smooth' });
+  }
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => scrollToIndex(parseInt(dot.dataset.i, 10)));
+  });
+
+  prev.addEventListener('click', () => {
+    const i = Math.max(0, Math.round(grid.scrollLeft / cardWidth()) - 1);
+    scrollToIndex(i);
+  });
+  next.addEventListener('click', () => {
+    const max = dots.length - 1;
+    const i = Math.min(max, Math.round(grid.scrollLeft / cardWidth()) + 1);
+    scrollToIndex(i);
+  });
+
+  let ticking = false;
+  grid.addEventListener('scroll', () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      const i = Math.round(grid.scrollLeft / cardWidth());
+      dots.forEach((d, idx) => d.classList.toggle('active', idx === i));
+      ticking = false;
+    });
+  });
+})();
 </script>
 
 </body>
