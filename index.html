@@ -17,18 +17,20 @@
 
 <nav>
   <div class="nav-left">
-    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <button class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
     <div class="logo">Innovative<span>/</span>Tech</div>
   </div>
-  <ul>
+  <ul id="navMenu">
     <li><a href="#services">Services</a></li>
     <li><a href="#demos">Live demos</a></li>
     <li><a href="#packages">Packages</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#contact">Contact</a></li>
+    <li class="menu-cta-row"><a href="#contact" class="nav-cta">Get a quote</a></li>
   </ul>
-  <a href="#contact" class="nav-cta">Get a quote</a>
+  <a href="#contact" class="nav-cta nav-cta-desktop">Get a quote</a>
 </nav>
+<div class="nav-scrim" id="navScrim"></div>
 
 <section class="hero">
   <div class="ghost-num">01</div>
@@ -483,6 +485,29 @@ function sendEmail() {
     document.getElementById('formSuccess').style.display = 'block';
   }, 800);
 }
+
+/* ---- mobile nav toggle ---- */
+(function () {
+  const btn = document.querySelector('.hamburger');
+  const menu = document.getElementById('navMenu');
+  const scrim = document.getElementById('navScrim');
+  if (!btn || !menu) return;
+
+  function closeMenu() {
+    document.body.classList.remove('nav-open');
+    btn.setAttribute('aria-expanded', 'false');
+  }
+  function openMenu() {
+    document.body.classList.add('nav-open');
+    btn.setAttribute('aria-expanded', 'true');
+  }
+  btn.addEventListener('click', () => {
+    document.body.classList.contains('nav-open') ? closeMenu() : openMenu();
+  });
+  scrim.addEventListener('click', closeMenu);
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+  window.addEventListener('resize', () => { if (window.innerWidth > 900) closeMenu(); });
+})();
 
 /* ---- demos carousel controls ---- */
 (function () {
