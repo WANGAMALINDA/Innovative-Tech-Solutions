@@ -486,6 +486,13 @@ function sendEmail() {
   }, 800);
 }
 
+/* ---- always open on the hero, even if the URL has a #section hash ---- */
+if (window.location.hash) {
+  window.history.replaceState(null, '', window.location.pathname + window.location.search);
+}
+window.scrollTo(0, 0);
+window.addEventListener('load', () => window.scrollTo(0, 0));
+
 /* ---- mobile nav toggle ---- */
 (function () {
   const btn = document.querySelector('.hamburger');
