@@ -4,8 +4,61 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Innovative Tech Solutions — Code. Learn. Grow.</title>
+<meta name="description" content="Innovative Tech Solutions builds websites, web apps, programming lessons, and IT consulting for businesses and learners in South Africa."/>
+<meta name="keywords" content="web development South Africa, website development, web apps, programming lessons, coding tutor, IT consulting, maintenance and training, Innovative Tech Solutions"/>
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"/>
+<link rel="canonical" href="https://www.innovativetechsolution.tech/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="Innovative Tech Solution"/>
+<meta property="og:title" content="Innovative Tech Solutions — Code. Learn. Grow."/>
+<meta property="og:description" content="Web development, programming lessons, and IT consulting for businesses and learners in South Africa."/>
+<meta property="og:url" content="https://www.innovativetechsolution.tech/"/>
+<meta property="og:image" content="https://www.innovativetechsolution.tech/Logo.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Innovative Tech Solutions, Code. Learn. Grow."/>
+<meta name="twitter:description" content="Web development, programming lessons, and IT consulting for businesses and learners in South Africa."/>
+<meta name="twitter:image" content="https://www.innovativetechsolution.tech/Logo.png"/>
+<meta name="theme-color" content="#0a1512"/>
+<link rel="icon" href="/favicon.ico"/>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="style.css?v=3">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.innovativetechsolution.tech/#organization",
+      "name": "Innovative Tech Solutions",
+      "url": "https://www.innovativetechsolution.tech/",
+      "logo": "https://www.innovativetechsolution.tech/Logo.png",
+      "email": "wangamalinda4@gmail.com",
+      "telephone": "+27 66 494 8899",
+      "sameAs": [
+        "https://github.com/WANGAMALINDA",
+        "https://linkedin.com/in/malinda-wanga",
+        "https://malindawanga.me"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.innovativetechsolution.tech/#website",
+      "url": "https://www.innovativetechsolution.tech/",
+      "name": "Innovative Tech Solutions",
+      "keywords": [
+        "web development South Africa",
+        "website development",
+        "web apps",
+        "programming lessons",
+        "IT consulting"
+      ],
+      "publisher": {
+        "@id": "https://www.innovativetechsolution.tech/#organization"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -454,111 +507,7 @@
   <div class="footer-copy">© 2025 Innovative Tech Solutions · Malinda Wanga</div>
 </footer>
 
-<script>
-function sendEmail() {
-  const name = document.getElementById('fname').value.trim();
-  const email = document.getElementById('femail').value.trim();
-  const service = document.getElementById('fservice').value;
-  const message = document.getElementById('fmessage').value.trim();
-
-  if (!name || !email || !service || !message) {
-    alert('Please fill in all required fields (Name, Email, Service, and Message).');
-    return;
-  }
-
-  const subject = encodeURIComponent('Innovative Tech Solutions Query');
-  const body = encodeURIComponent(
-    'Hi Malinda,\n\n' +
-    'You have received a new query from your website.\n\n' +
-    '--- ENQUIRY DETAILS ---\n' +
-    'Name: ' + name + '\n' +
-    'Email: ' + email + '\n' +
-    'Service of Interest: ' + service + '\n\n' +
-    'Message:\n' + message + '\n\n' +
-    '--- Sent via Innovative Tech Solutions Website ---'
-  );
-
-  window.location.href = 'mailto:wangamalinda4@gmail.com?subject=' + subject + '&body=' + body;
-
-  setTimeout(() => {
-    document.getElementById('queryForm').style.display = 'none';
-    document.getElementById('formSuccess').style.display = 'block';
-  }, 800);
-}
-
-/* ---- always open on the hero, even if the URL has a #section hash ---- */
-if (window.location.hash) {
-  window.history.replaceState(null, '', window.location.pathname + window.location.search);
-}
-window.scrollTo(0, 0);
-window.addEventListener('load', () => window.scrollTo(0, 0));
-
-/* ---- mobile nav toggle ---- */
-(function () {
-  const btn = document.querySelector('.hamburger');
-  const menu = document.getElementById('navMenu');
-  const scrim = document.getElementById('navScrim');
-  if (!btn || !menu) return;
-
-  function closeMenu() {
-    document.body.classList.remove('nav-open');
-    btn.setAttribute('aria-expanded', 'false');
-  }
-  function openMenu() {
-    document.body.classList.add('nav-open');
-    btn.setAttribute('aria-expanded', 'true');
-  }
-  btn.addEventListener('click', () => {
-    document.body.classList.contains('nav-open') ? closeMenu() : openMenu();
-  });
-  scrim.addEventListener('click', closeMenu);
-  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
-  window.addEventListener('resize', () => { if (window.innerWidth > 900) closeMenu(); });
-})();
-
-/* ---- demos carousel controls ---- */
-(function () {
-  const grid = document.getElementById('demosGrid');
-  const dots = document.querySelectorAll('#demosDots span');
-  const prev = document.getElementById('demosPrev');
-  const next = document.getElementById('demosNext');
-  if (!grid) return;
-
-  function cardWidth() {
-    const card = grid.querySelector('.demo-card');
-    return card ? card.getBoundingClientRect().width + 28.8 : 400; // width + gap
-  }
-
-  function scrollToIndex(i) {
-    grid.scrollTo({ left: i * cardWidth(), behavior: 'smooth' });
-  }
-
-  dots.forEach(dot => {
-    dot.addEventListener('click', () => scrollToIndex(parseInt(dot.dataset.i, 10)));
-  });
-
-  prev.addEventListener('click', () => {
-    const i = Math.max(0, Math.round(grid.scrollLeft / cardWidth()) - 1);
-    scrollToIndex(i);
-  });
-  next.addEventListener('click', () => {
-    const max = dots.length - 1;
-    const i = Math.min(max, Math.round(grid.scrollLeft / cardWidth()) + 1);
-    scrollToIndex(i);
-  });
-
-  let ticking = false;
-  grid.addEventListener('scroll', () => {
-    if (ticking) return;
-    ticking = true;
-    requestAnimationFrame(() => {
-      const i = Math.round(grid.scrollLeft / cardWidth());
-      dots.forEach((d, idx) => d.classList.toggle('active', idx === i));
-      ticking = false;
-    });
-  });
-})();
-</script>
+<script src="site.bundle.js"></script>
 
 </body>
 </html>

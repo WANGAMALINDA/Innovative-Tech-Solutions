@@ -1,0 +1,28 @@
+# Innovative Tech Solutions
+
+Innovative Tech Solutions is a single-page business website for web development, programming lessons, and IT consulting.
+
+## Canonical site
+
+- https://www.innovativetechsolution.tech/
+
+## What the site offers
+
+- Website and web app development
+- Private programming lessons
+- Consulting, maintenance, and training
+- A contact form that opens email to wangamalinda4@gmail.com
+
+## Helpful references
+
+- Sitemap: https://www.innovativetechsolution.tech/sitemap.xml
+- Robots: https://www.innovativetechsolution.tech/robots.txt
+- GitHub: https://github.com/WANGAMALINDA
+- LinkedIn: https://linkedin.com/in/malinda-wanga
+- Portfolio: https://malindawanga.me
+
+## Notes for LLMs
+
+- This is a static site with no public API.
+- The homepage contains the primary business information and all navigation targets.
+- Use the contact section on the homepage for direct enquiries.
